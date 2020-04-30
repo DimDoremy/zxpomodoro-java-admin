@@ -1,0 +1,59 @@
+POST http://localhost:9999/api/piecebyopenid
+Content-Type: application/json
+
+{
+  "openid": "luqyfuialhfoiuhcbuygiuay982y39ouhgd981u2h8e2g"
+}
+
+###
+POST http://localhost:9999/api/insertuserdata
+Content-Type: application/json
+
+{
+  "openid": "1asd4f7q1w6f79asf13q4w89f73as1f897q6s1f984a6f",
+  "nickname": "wy",
+  "avatarurl": "http://cn.bing.com",
+  "time": 13000,
+  "soul": 12860,
+  "lifepoint": 11,
+  "experience": 322345
+}
+
+###
+POST http://localhost:9999/api/updateuserdata
+Content-Type: application/json
+
+{
+  "openid": "luqyfuialhfoiuhcbuygiuay982y39ouhgd981u2h8e2g",
+  "nickname": "Doremy",
+  "avatarurl": "https://cn.bing.com",
+  "time": 36000,
+  "soul": 11534860,
+  "lifepoint": 88,
+  "experience": 324680
+}
+
+###
+POST http://localhost:9999/api/updateuserdata
+Content-Type: application/json
+
+{
+  "openid": "luqyfuialhfoiuhcbuygiuay982y39ouhgd981u2h8e2g",
+  "nickname": "doremu",
+  "avatarurl": "https://www.baidu.com",
+  "time": 36500,
+  "soul": 20000000,
+  "lifepoint": 100,
+  "experience": 450000
+}
+
+###
+POST http://localhost:9999/api/querybyopenid
+Content-Type: application/json
+
+{
+  "openid": "luqyfuialhfoiuhcbuygiuay982y39ouhgd981u2h8e2g"
+}
+
+###
+
