@@ -1,0 +1,8 @@
+com\zxpomodoro\miniprogram\controller\PieceController.class
+com\zxpomodoro\miniprogram\mapper\PieceMapper.class
+com\zxpomodoro\miniprogram\controller\UserController.class
+com\zxpomodoro\miniprogram\model\UserPiece.class
+com\zxpomodoro\miniprogram\config\SwaggerConfig.class
+com\zxpomodoro\miniprogram\MiniprogramApplication.class
+com\zxpomodoro\miniprogram\mapper\UserMapper.class
+com\zxpomodoro\miniprogram\model\UserData.class

@@ -2,7 +2,6 @@ package com.zxpomodoro.miniprogram.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zxpomodoro.miniprogram.mapper.PieceMapper;
-import com.zxpomodoro.miniprogram.model.UserData;
 import com.zxpomodoro.miniprogram.model.UserPiece;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;

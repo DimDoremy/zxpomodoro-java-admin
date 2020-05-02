@@ -9,11 +9,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class HandBook {
     private String openid;
-    private int chenghuang;
-    private int qiongqi;
-    private int luwu;
-    private int dijiang;
-    private int tianwu;
-    private int jiuwei;
-    private int dangkang;
+    private int monster1;
+    private int monster2;
+    private int monster3;
+    private int monster4;
+    private int monster5;
+    private int monster6;
+    private int monster7;
 }
