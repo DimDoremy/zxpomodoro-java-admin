@@ -1,8 +1,13 @@
+G:\mac\ZxPomodoro\src\main\java\com\zxpomodoro\miniprogram\mapper\BookMapper.java
 G:\mac\ZxPomodoro\src\main\java\com\zxpomodoro\miniprogram\controller\UserController.java
-G:\mac\ZxPomodoro\src\main\java\com\zxpomodoro\miniprogram\model\UserPiece.java
 G:\mac\ZxPomodoro\src\main\java\com\zxpomodoro\miniprogram\mapper\UserMapper.java
-G:\mac\ZxPomodoro\src\main\java\com\zxpomodoro\miniprogram\MiniprogramApplication.java
 G:\mac\ZxPomodoro\src\main\java\com\zxpomodoro\miniprogram\config\SwaggerConfig.java
+G:\mac\ZxPomodoro\src\main\java\com\zxpomodoro\miniprogram\model\HandBook.java
 G:\mac\ZxPomodoro\src\main\java\com\zxpomodoro\miniprogram\model\UserData.java
 G:\mac\ZxPomodoro\src\main\java\com\zxpomodoro\miniprogram\controller\PieceController.java
+G:\mac\ZxPomodoro\src\main\java\com\zxpomodoro\miniprogram\tools\RedisUtils.java
 G:\mac\ZxPomodoro\src\main\java\com\zxpomodoro\miniprogram\mapper\PieceMapper.java
+G:\mac\ZxPomodoro\src\main\java\com\zxpomodoro\miniprogram\model\UserPiece.java
+G:\mac\ZxPomodoro\src\main\java\com\zxpomodoro\miniprogram\MiniprogramApplication.java
+G:\mac\ZxPomodoro\src\main\java\com\zxpomodoro\miniprogram\controller\BookController.java
+G:\mac\ZxPomodoro\src\main\java\com\zxpomodoro\miniprogram\controller\WebSocketController.java

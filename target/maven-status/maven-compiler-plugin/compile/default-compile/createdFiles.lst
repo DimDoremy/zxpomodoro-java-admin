@@ -1,8 +1,13 @@
 com\zxpomodoro\miniprogram\controller\PieceController.class
 com\zxpomodoro\miniprogram\mapper\PieceMapper.class
+com\zxpomodoro\miniprogram\tools\RedisUtils.class
 com\zxpomodoro\miniprogram\controller\UserController.class
+com\zxpomodoro\miniprogram\model\UserData.class
+com\zxpomodoro\miniprogram\controller\WebSocketController.class
+com\zxpomodoro\miniprogram\controller\BookController.class
 com\zxpomodoro\miniprogram\model\UserPiece.class
 com\zxpomodoro\miniprogram\config\SwaggerConfig.class
 com\zxpomodoro\miniprogram\MiniprogramApplication.class
 com\zxpomodoro\miniprogram\mapper\UserMapper.class
-com\zxpomodoro\miniprogram\model\UserData.class
+com\zxpomodoro\miniprogram\mapper\BookMapper.class
+com\zxpomodoro\miniprogram\model\HandBook.class

@@ -1,3 +1,11 @@
+POST http://localhost:9999/api/openid
+Content-Type: application/json
+
+{
+  "code": "023JtxjK0CThqa2dtGkK0S7QjK0Jtxjg"
+}
+
+###
 POST https://www.doremy.work/api/piecebyopenid
 Content-Type: application/json
 
