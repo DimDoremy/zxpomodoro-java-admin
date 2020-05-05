@@ -1,3 +1,26 @@
+POST http://localhost:9999/api/updaterecruit
+Content-Type: application/json
+
+{
+  "makerid": "123",
+  "bossid": 2,
+  "bosslife": 10000,
+  "gamer": {
+    "gamer1": "159",
+    "gamer2": "2486",
+    "gamer3": "357"
+  }
+}
+
+###
+POST https://www.doremy.work/api/recruitbymakerid
+Content-Type: application/json
+
+{
+  "makerid": "123"
+}
+
+###
 POST https://www.doremy.work/api/inserthandbook
 Content-Type: application/json
 
