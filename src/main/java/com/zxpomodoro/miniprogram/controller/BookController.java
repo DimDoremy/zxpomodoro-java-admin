@@ -1,5 +1,6 @@
 package com.zxpomodoro.miniprogram.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zxpomodoro.miniprogram.mapper.BookMapper;
 import com.zxpomodoro.miniprogram.model.HandBook;
@@ -7,10 +8,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -102,6 +100,28 @@ public class BookController {
             HandBook handBook = mapper.readValue(jsonData, HandBook.class);
             log.info(handBook.getOpenid() + ": insert success");
             return bookMapper.insertNewUserHandBook(handBook);
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            return -1;
+        }
+    }
+
+    /**
+     * 删除图鉴数据库指定条目
+     *
+     * @param jsonId 单openid的json字符串请求
+     * @return 成功返回1，失败-1
+     */
+    @ApiOperation(value = "删除图鉴数据库指定条目")
+    @ApiImplicitParam(name = "jsonId", value = "单openid的json字符串请求", dataType = "String", paramType = "query")
+    @PostMapping(value = "/api/deletehandbook")
+    public int deleteByOpenid(@RequestBody String jsonId) {
+        try {
+            var maps = mapper.readValue(jsonId, Map.class);
+            var handBook = bookMapper.selectByOpenid((String) maps.get("openid"));
+            int returns = bookMapper.deleteByOpenid((String) maps.get("openid"));
+            log.info(handBook.getOpenid() + ": delete success");
+            return returns;
         } catch (Exception e) {
             log.error(e.getMessage());
             return -1;

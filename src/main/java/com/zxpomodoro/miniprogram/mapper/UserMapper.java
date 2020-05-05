@@ -51,4 +51,7 @@ public interface UserMapper {
             "VALUES(#{openid},#{nickname},#{avatarurl},${time},${soul},${lifepoint},${experience})")
     @Options(keyProperty = "openid", keyColumn = "openid", useGeneratedKeys = true)
     int insertUserData(UserData userData);
+
+    @Delete("DELETE FROM userData WHERE openid=#{openid}")
+    int deleteByOpenid(String openid);
 }

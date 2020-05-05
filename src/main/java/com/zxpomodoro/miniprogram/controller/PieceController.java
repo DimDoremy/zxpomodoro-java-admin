@@ -7,10 +7,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -102,6 +99,28 @@ public class PieceController {
             UserPiece userPiece = mapper.readValue(jsonData, UserPiece.class);
             log.info(userPiece.getOpenid() + ": insert success");
             return pieceMapper.insertNewUserPiece(userPiece);
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            return -1;
+        }
+    }
+
+    /**
+     * 删除背包数据库指定条目
+     *
+     * @param jsonId 单openid的json字符串请求
+     * @return 成功返回1，失败-1
+     */
+    @ApiOperation(value = "删除背包数据库指定条目")
+    @ApiImplicitParam(name = "jsonId",value = "单openid的json字符串请求",dataType = "String",paramType = "query")
+    @PostMapping(value = "/api/deleteuserpiece")
+    public int deleteByOpenid(@RequestBody String jsonId) {
+        try {
+            var maps = mapper.readValue(jsonId, Map.class);
+            var userPiece = pieceMapper.selectByOpenid((String) maps.get("openid"));
+            int returns = pieceMapper.deleteByOpenid((String) maps.get("openid"));
+            log.info(userPiece.getOpenid() + ": delete success");
+            return returns;
         } catch (Exception e) {
             log.error(e.getMessage());
             return -1;

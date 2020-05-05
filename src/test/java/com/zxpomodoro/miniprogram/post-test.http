@@ -1,8 +1,15 @@
-POST http://localhost:9999/api/openid
+POST https://www.doremy.work/api/inserthandbook
 Content-Type: application/json
 
 {
-  "code": "023JtxjK0CThqa2dtGkK0S7QjK0Jtxjg"
+  "openid": "luqyfuialhfoiuhcbuygiuay982y39ouhgd981u2h8e2g",
+  "monster1": 0,
+  "monster2": 0,
+  "monster3": 0,
+  "monster4": 0,
+  "monster5": 0,
+  "monster6": 0,
+  "monster7": 0
 }
 
 ###

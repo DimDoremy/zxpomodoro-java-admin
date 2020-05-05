@@ -1,10 +1,7 @@
 package com.zxpomodoro.miniprogram.mapper;
 
 import com.zxpomodoro.miniprogram.model.UserPiece;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -37,4 +34,7 @@ public interface PieceMapper {
             "${fuxiqin},${shennongding}," +
             "${kongtongyin},${kunlunjing},${nvwashi})")
     int insertNewUserPiece(UserPiece userPiece);
+
+    @Delete("DELETE FROM userPiece WHERE openid=#{openid}")
+    int deleteByOpenid(String openid);
 }

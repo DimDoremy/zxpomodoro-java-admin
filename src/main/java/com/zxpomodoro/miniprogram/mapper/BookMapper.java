@@ -1,10 +1,7 @@
 package com.zxpomodoro.miniprogram.mapper;
 
 import com.zxpomodoro.miniprogram.model.HandBook;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -28,6 +25,9 @@ public interface BookMapper {
     void updateHandBook(HandBook handBook);
 
     @Insert("INSERT INTO handBook " +
-            "VALUES (#{openid},${monster1},${monster2},${monster3},${monster4},${monster5},${monster6},${monster7}")
+            "VALUES (#{openid},${monster1},${monster2},${monster3},${monster4},${monster5},${monster6},${monster7})")
     int insertNewUserHandBook(HandBook handBook);
+
+    @Delete("DELETE FROM handBook WHERE openid=#{openid}")
+    int deleteByOpenid(String openid);
 }

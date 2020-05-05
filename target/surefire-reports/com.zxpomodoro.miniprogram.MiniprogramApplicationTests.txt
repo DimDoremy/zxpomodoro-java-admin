@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.zxpomodoro.miniprogram.MiniprogramApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.78 s - in com.zxpomodoro.miniprogram.MiniprogramApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.436 s - in com.zxpomodoro.miniprogram.MiniprogramApplicationTests
